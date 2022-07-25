@@ -67,8 +67,8 @@ Blog
                 <div class="card-body">
                     <form action="" method="post" class="text-center">
                         {% csrf_token %}
-                        <p>Nombre: {{blog.user}}></p>
-                        <p>Comentario: <input type="text" name="comentario" maxlength="500"></p>
+                        <p>Nombre: {{form.nombre}}></p>
+                        <p>Comentario: {{form.comentario}}</p>
             
                         <br>
                         <br>
