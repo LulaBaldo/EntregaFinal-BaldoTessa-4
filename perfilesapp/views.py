@@ -630,7 +630,7 @@ def blog_detail(request, blog_id):
             comentarios.save()
             return redirect("blog")
         else:
-             return redirect("blog_detail")
+             return redirect("blog_detail", blog_id=blog_id)
 
     return render(request, "perfilesapp/blog_detail.html", {"blog": blog, "comentarios":comentarios, "url":url})
 
