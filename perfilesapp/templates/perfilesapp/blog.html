@@ -46,7 +46,7 @@ Blog
                             {% endif %}
                             <div class="card-body">
                                 <h4 class="card-title">{{blog.titulo}}</h4>
-                                <p class="card-text"> {{user}}, {{blog.fecha}}</p>
+                                <p class="card-text"> {{blog.user}}, {{blog.fecha}}</p>
                                 <span class="col-md-auto"><a href="{% url 'blog_detail' blog.id %}"><button type="button" class="btn btn-outline-dark">Ver mas</button></a></span>
                             </div>
                         </div>

@@ -137,6 +137,7 @@ def crear_avatar(request):
 
             info_avatar=form.cleaned_data
             avatar= Avatar()
+            avatar.usuario = request.user
             avatar.imagen = info_avatar["imagen"]
             avatar.save()
             return redirect("inicio")
@@ -584,7 +585,6 @@ def editar_blog(request, blog_id):
             blog.titulo = info_blog["titulo"]
             blog.subtitulo = info_blog["subtitulo"]
             blog.texto = info_blog["texto"]
-            blog.autor = info_blog["autor"]
             blog.fecha = info_blog["fecha"]
             
             if request.FILES:
@@ -598,7 +598,7 @@ def editar_blog(request, blog_id):
                                               "subtitulo":blog.subtitulo,
                                               "texto":blog.texto,
                                               "imagen": blog.imagen,
-                                              "autor":blog.autor,
+                                              "user":blog.user,
                                               "fecha":blog.fecha,
                                               })
     
