@@ -12,6 +12,8 @@ Se debe mejorar:
 - [ ]Agregar insignias "me gusta" a los posteos de blog
 - [ ]Mejorar el login/agregado de avatars
 - [ ]Correrlo en servidor
+- [ ]Corregir Comentarios en posteos de blog
+- [ ]Colocar fecha y usuario automaticamente en la creacion del posteo del blog
 
 #INSIGNIA
 Se encuentra en estado Betha, si bien necesita mejoras, puede ser testeado por usuarios.
@@ -40,9 +42,11 @@ http://127.0.0.1:8000/ - Ruta que deriva en el inicio de la web - Nav Bar intera
 
 http://127.0.0.1:8000/about/ - Sobre las autoras del proyecto
 
-http://127.0.0.1:8000/nosotros/ - Informacion sobre la escuela y listado de Instructores en donde se puede buscar por nombre y apellido
+http://127.0.0.1:8000/nosotros/ - Informacion sobre la escuela y listado de Instructores en donde se puede buscar por nombre y apellido. Incluye boton que deriba en la ruta /about, con mas informacion sobre las autoras.
 
 http://127.0.0.1:8000/blog/ - Blog, acceso al blog, mediante el boton ver mas, a cada posteo
+
+http://127.0.0.1:8000/blog_detail/id - Posteo con detalles.
 
 http://127.0.0.1:8000/tienda/ - Tienda, crea acceso a los dos tipos de tienda mediante botones:
 
