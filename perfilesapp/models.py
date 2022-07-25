@@ -80,6 +80,7 @@ class Blog(models.Model):
     fecha = models.DateTimeField(auto_now=True, verbose_name="Fecha" )
 
 class Comentario(models.Model):
+    blog= models.ForeignKey(Blog, verbose_name="Blog", null=True, blank=True, on_delete=models.SET_NULL, editable=False)
     nombre= models.CharField("Nombre", max_length=15)
     comentario= models.CharField("Comentario", max_length=500)
 

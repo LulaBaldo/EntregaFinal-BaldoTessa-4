@@ -612,7 +612,7 @@ def blog_detail(request, blog_id):
         url= "/media/avatar/generic.png" 
 
     blog = Blog.objects.get(id=blog_id)   
-    comentarios=Comentario.objects.all()
+    comentarios=Comentario.objects.filter(blog_id=blog_id)
 
     if request.method == "GET":
         formulariovacio=ComentarioForm()
@@ -626,7 +626,7 @@ def blog_detail(request, blog_id):
 
             info_comentario=formulario.cleaned_data
 
-            comentarios=Comentario(nombre=info_comentario["nombre"], comentario=info_comentario["comentario"])
+            comentarios=Comentario(blog=blog, nombre=info_comentario["nombre"], comentario=info_comentario["comentario"])
             comentarios.save()
             return redirect("blog")
         else:
